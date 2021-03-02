@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <div class="box" id="heading">
+    <h1>Its <%= Day %></h1>
+
+  </div>
+
+
+  <div class="box">
+    <% newListItem.forEach(function(item){ %>
+      <form class="" action="/delete" method="post">
+        <div class="item">
+          <input type="checkbox" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()">
+          <p><%= item.name %></p>
+        </div>
+      </form>
+  <% }); %>
+  </ul>
+
+
+  <form class="item" action="/" method="post">
+    <input type="text" name="item" placeholder="Enter Item" autocomplete="off">
+    <button type="submit" name="button">+</button>
+
+  </form>
+  </div>
+
+
+
+
+
+</body>
+
+</html>
